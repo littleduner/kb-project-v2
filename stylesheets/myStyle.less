@@ -39,7 +39,7 @@
 	-ms-box-shadow:@boxshdow;
 	box-shadow:@boxshdow;
 }
-
+@headerbgcolor:#ffffff;
 /* 界面最大的背景色 （目前为白色） */
 @contentbgcolor:#ffffff;
 /* 第一种主颜色 */
@@ -61,13 +61,26 @@
 @color2:#149b88;
 
 html{height:100%;width:100%;}
-body{padding:60px 0 70px;position:relative;min-height:100%;font-family:'微软雅黑';}
+body{padding:60px 0 70px;position:relative;min-height:100%;font-family:'微软雅黑';background:@bgcolor;}
 .kba{color:@color1;}
 .kba:hover{color:lighten(@color1,10%);}
-header{border-top:5px solid @color1;font-size:24px;color:#777;font-family:'黑体' ;font-weight:bold;line-height:2em;background:@bgcolor;padding-left:40px;height:60px;top:0px;width:100%;
-	aside{right:40px;bottom:0px;font-size:16px;line-height:2em;
+header{border-top:5px solid @color1;font-size:24px;color:#777;font-family:'黑体' ;font-weight:bold;line-height:2em;background:@headerbgcolor;padding-left:40px;height:60px;top:0px;width:100%;
+	aside{right:120px;bottom:0px;font-size:16px;line-height:2em;
 		li{cursor:pointer;width:54px;text-align:center;}
 	}
+	div{
+		margin-left:150px;
+	}
+}
+header:before{
+	content:"";
+	position:absolute;
+	left:125px;
+	top:5px;
+	width:100px;
+	height:100px;
+	background:url("../images/logo.jpg");
+	background-repeat:no-repeat;
 }
 .header_line{bottom:0px;left:0px;width:54px;height:4px;background:@color1;
 	.getTransition(all ease @animateTime);
@@ -94,7 +107,7 @@ footer{
 	.getBorderRadius(0px);
 }
 
-.head_detail,.mykb,.kb_index_serviceprocess{width:1050px;margin:0 auto;}
+.head_detail,.mykb,.kb_index_serviceprocess{width:1050px;margin:10px auto;}
 
 /* v2 */
 .nav_box{
@@ -134,7 +147,7 @@ footer{
 
 .kb_index_serviceprocess{
 	background:@bgcolor;
-	border:1px solid #ccc;padding:4px;
+	padding:4px;
 	
 }
 
@@ -179,7 +192,7 @@ footer{
 .left_ul_2 {
 	
 	.ul_title{
-		height:35px;
+		height:50px;
 		background:@listselected;
 		position:relative;
 		div:first-child{
@@ -205,23 +218,31 @@ footer{
 	.ul_title div{
 		display:inline-block;
 	}
-	
+	li{
+		border-bottom:1px solid #ccc;
+		li{
+			border-bottom:0;
+		}
+	}
 		
 }
 
-.ul_horizontal_list{
+.ul_horizontal_list1{
+	background:@secondcolor;
 	li{
 		display:inline-block;
 		font-size:14px;	
 		height:80px;
 		div{
 			float:left;
+			margin-top:10px;
 			width:70px;
 			height:70px;
 		}
 	}
 	li:nth-child(1) {
 		div{
+			margin-left:8px;
 			background:url("../images/index/officeintro.jpg");
 			background-repeat:no-repeat;
 			}
@@ -240,8 +261,113 @@ footer{
 	}
 }
 
+.ul_horizontal_list2{
+	position:relative;
+	height:80px;
+	li:before{
+		content:"";
+		position:absolute;
+		left:10px;
+		top:10px;
+		width:90%;
+		height:90%;
+		background:url("../images/index/24hours.jpg");
+		background-repeat:no-repeat;
+	}
+	div{
+	
+		position:absolute;
+		left:80px;
+		
+		top:15px;
+		p{
+			font-size:20px;
+			color:@fontorange;
+		}
+	}
+}
+.ul_horizontal_list3{
+	position:relative;
+	height:80px;
+	li{
+		display:inline-block;
+		font-size:14px;	
+		height:80px;
+		div{
+			margin-top:20px;
+			float:left;
+			width:70px;
+			height:70px;
+		}
+	}
+	li:nth-child(1){
+		div{
+			position:absolute;
+			left:50px;
+		}
+	}
+	li:nth-child(2){
+		div{
+			position:absolute;
+			left:160px;
+		}
+	}
+	li:nth-child(1):before{
+		content:"";
+		position:absolute;
+		left:10px;
+		top:20px;
+		width:90%;
+		height:90%;
+		background:url("../images/index/phone.jpg");
+		background-repeat:no-repeat;
+	}
+	li:nth-child(2):before{
+		content:"";
+		position:absolute;
+		left:125px;
+		top:20px;
+		width:90%;
+		height:90%;
+		background:url("../images/index/qq.jpg");
+		background-repeat:no-repeat;
+	}
+}
+.ul_horizontal_list4{
+	position:relative;
+	height:80px;
+	li:before{
+		content:"";
+		position:absolute;
+		top:20px;
+		left:10px;
+		width:90%;
+		height:90%;
+		background:url("../images/index/clock.jpg");
+		background-repeat:no-repeat;
+	}
+	div{
+	
+		position:absolute;
+		top:20px;
+		left:80px;
+		
+	}
+}
 
-
+.content_head{
+	div{
+		display:inline;
+	}
+	.content_head_left{
+		margin-left:10px;
+		color:@maincolor;
+	}
+	.content_head_right{
+		margin-left:450px;
+		font-size:14px;
+	}
+}
 
 /* v1 */
 .img_photo{width:200px;margin:16px 0;}
