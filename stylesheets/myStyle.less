@@ -40,6 +40,22 @@
 	box-shadow:@boxshdow;
 }
 
+/* 界面最大的背景色 （目前为白色） */
+@contentbgcolor:#ffffff;
+/* 第一种主颜色 */
+@maincolor:#37b381;
+/* 第二种主颜色 那个浅绿色 */
+@secondcolor:#d7f6ea;
+/* 字体的橘色颜色 */
+@fontorange:#fec478;
+/* 被选中那个nav的颜色 */
+@activeorange:#ffc925;
+/* 内容块的背景色 */
+@bgcolor:#efefef;
+/* 字体的颜色 这里为白色 */
+@fontcolor:#ffffff;
+/* 列表被选中 */
+@listselected:#f7f7f7;
 @color1:#149b70; 
 @animateTime : 300ms;
 @color2:#149b88;
@@ -48,7 +64,7 @@ html{height:100%;width:100%;}
 body{padding:60px 0 70px;position:relative;min-height:100%;font-family:'微软雅黑';}
 .kba{color:@color1;}
 .kba:hover{color:lighten(@color1,10%);}
-header{border-top:5px solid @color1;font-size:24px;color:#777;font-family:'黑体' ;font-weight:bold;line-height:2em;background:#eee;padding-left:40px;height:60px;top:0px;width:100%;
+header{border-top:5px solid @color1;font-size:24px;color:#777;font-family:'黑体' ;font-weight:bold;line-height:2em;background:@bgcolor;padding-left:40px;height:60px;top:0px;width:100%;
 	aside{right:40px;bottom:0px;font-size:16px;line-height:2em;
 		li{cursor:pointer;width:54px;text-align:center;}
 	}
@@ -78,44 +94,156 @@ footer{
 	.getBorderRadius(0px);
 }
 
-.head_detail,.mykb{width:1000px;margin:0 auto;}
-.nav_box{background:url('../images/home_icon.jpg') no-repeat 0 0;width:1000px;height:52px;margin:10px auto;
-		
-		li{
-			width:200px;margin-top:5px;
-			a{display:inline-block;margin:5px;width:100%;height:40px;font-size:16px;color:#000;text-align:center;line-height:40px;padding:0;margin:0;
-			.getTransition(all @animateTime ease);
-			}
-			a:first-child{margin-left:2%;}
-			a:hover,.active{text-decoration:none;background:@color1;color:#fff;
-				.getBorderRadius(5px);
-			}
-		}
-		
-		.secondli{
-			width:150px;
-			a{display:inline-block;margin:auto;width:100%;height:40px;font-size:16px;color:#000;text-align:center;line-height:40px;
-			.getTransition(all @animateTime ease);
-			}
-			a:first-child{margin-left:2%;}
-			a:hover,.active{text-decoration:none;background:@color1;color:#fff;
-				.getBorderRadius(5px);
-			}
-		}		
+.head_detail,.mykb,.kb_index_serviceprocess{width:1050px;margin:0 auto;}
+
+/* v2 */
+.nav_box{
+	background:@maincolor;
+	display:inline-block;
+	font-size:14px;
+	width:100%;
+	z-index:0;
 }
-.nav-pills{
+.ul_kb_pills{
+	margin-left:10%;
+	z-index:9;
+	li{
+		display:block;
+		padding-top:5px;
+		float:left;
+		height:30px;
+		/* 不确定应该填什么 */
+		width:13%;
+		background:@maincolor;
+		text-align:center;
+		color:@fontcolor;
+		border-left:1px solid #ccc;
+	}
+	li:last-child{
+		border-right:1px solid #ccc;
+	}
+	.active{
+		background:@activeorange;
+	}
 	
-	>li.active {
-		>a{
-			color: @color1;color:#fff;
-			background-color: @color1;color:#fff;
+}
+
+.left_area,.content_area{
+	background:@contentbgcolor;
+}
+
+.kb_index_serviceprocess{
+	background:@bgcolor;
+	border:1px solid #ccc;padding:4px;
+	
+}
+
+.left_ul_1 {
+	
+	text-decoration: none;
+	position:relative;
+	.ul_title{
+		text-align:center;
+		background:@maincolor;
+		color:@fontcolor;
+		height:60px;
+		padding-top:10px;
+	}
+	
+	li:not(.ul_title){
+		
+		height:40px;
+		padding-top:8px;
+		a{
+			color:#000000;
+			padding-left:50px;
 		}
+		border-bottom:1px solid #ccc;
+	}
+	.active{
+		background:@listselected;
+		
+	}
+	
+	.active:before{
+		content:"";
+		position:absolute;
+		left:10px;
+		width:25px;
+		height:25px;
+		background:url("../images/index/arrow.jpg");
+		background-repeat:no-repeat;
 	}
 }
-.mykb{
-	border:1px solid #ccc;padding:16px;
-	.getBoxShdow(2px 2px 5px #333);
+
+.left_ul_2 {
+	
+	.ul_title{
+		height:35px;
+		background:@listselected;
+		position:relative;
+		div:first-child{
+			position:absolute;
+			left:20px;
+			top:5px;
+			height:30px;
+			width:55%;
+			background:url("../images/index/serviceentrance.jpg");
+			background-repeat:no-repeat;
+		}
+		
+		div:last-child{
+			position:absolute;
+			left:75%;
+			top:50%;
+			height:30px;
+			width:30%;
+			background:url("../images/index/more.jpg");
+			background-repeat:no-repeat;
+		}
+	}
+	.ul_title div{
+		display:inline-block;
+	}
+	
+		
 }
+
+.ul_horizontal_list{
+	li{
+		display:inline-block;
+		font-size:14px;	
+		height:80px;
+		div{
+			float:left;
+			width:70px;
+			height:70px;
+		}
+	}
+	li:nth-child(1) {
+		div{
+			background:url("../images/index/officeintro.jpg");
+			background-repeat:no-repeat;
+			}
+	}
+	li:nth-child(2) {
+		div{
+			background:url("../images/index/doctorpocess.jpg");
+			background-repeat:no-repeat;
+			}
+	}
+	li:nth-child(3) {
+		div{
+			background:url("../images/index/routetocome.jpg");
+			background-repeat:no-repeat;
+			}
+	}
+}
+
+
+
+
+/* v1 */
 .img_photo{width:200px;margin:16px 0;}
 
 .ul_result{
