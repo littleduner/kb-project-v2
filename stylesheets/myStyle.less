@@ -107,7 +107,7 @@ footer{
 	.getBorderRadius(0px);
 }
 
-.head_detail,.mykb,.kb_index_serviceprocess{width:1050px;margin:10px auto;}
+.head_detail,.mykb,.kb_index_serviceprocess{width:1100px;margin:10px auto;}
 
 /* v2 */
 .nav_box{
@@ -220,6 +220,71 @@ footer{
 	}
 	li{
 		border-bottom:1px solid #ccc;
+		li{
+			border-bottom:0;
+		}
+	}
+		
+}
+
+.kbintro_left_ul_2 {
+	
+	.ul_title{
+		height:50px;
+		background:@listselected;
+		position:relative;
+		div:first-child{
+			position:absolute;
+			left:20px;
+			top:5px;
+			height:30px;
+			width:55%;
+			background:url("../images/index/serviceentrance.jpg");
+			background-repeat:no-repeat;
+		}
+		
+		div:last-child{
+			position:absolute;
+			left:75%;
+			top:50%;
+			height:30px;
+			width:30%;
+			background:url("../images/index/more.jpg");
+			background-repeat:no-repeat;
+		}
+	}
+	.ul_title div{
+		display:inline-block;
+	}
+	.kbintro_ul_title{
+		height:50px;
+		background:@listselected;
+		position:relative;
+		div:first-child{
+			position:absolute;
+			left:20px;
+			top:5px;
+			height:30px;
+			width:55%;
+			background:url("../images/index/routetocomelogo.jpg");
+			background-repeat:no-repeat;
+		}
+		
+		div:last-child{
+			position:absolute;
+			left:75%;
+			top:50%;
+			height:30px;
+			width:30%;
+			background:url("../images/index/more.jpg");
+			background-repeat:no-repeat;
+		}
+	}
+	.kbintro_ul_title div{
+		display:inline-block;
+	}
+	li{
+		
 		li{
 			border-bottom:0;
 		}
@@ -355,6 +420,110 @@ footer{
 	}
 }
 
+.kbintro_ul_horizontal_list1{
+	
+	li{
+		display:inline-block;
+		font-size:14px;	
+		height:135px;
+		div{
+			margin-top:10px;
+			
+			float:left;
+			width:207px;
+			height:128px;
+			margin-left:20px;
+			background:url("../images/index/amap.jpg");
+			background-repeat:no-repeat;
+		}
+	}
+	
+}
+
+
+.kbintro_ul_horizontal_list2{
+	position:relative;
+	height:80px;
+	li{
+		display:inline-block;
+		font-size:14px;	
+		height:80px;
+		div{
+			margin-top:20px;
+			float:left;
+			width:70px;
+			height:70px;
+		}
+	}
+	li:nth-child(1){
+		
+		div:first-child{
+			position:absolute;
+			left:30px;
+		}
+		div:last-child{
+			position:absolute;
+			top:30px;
+			left:10px;
+		}
+	}
+	li:nth-child(2){
+		
+		div:first-child{
+			position:absolute;
+			left:80px;
+		}
+		div:last-child{
+			position:absolute;
+			top:30px;
+			left:60px;
+		}
+	}
+	li:nth-child(3){
+		
+		div:first-child{
+			position:absolute;
+			left:130px;
+		}
+		div:last-child{
+			position:absolute;
+			top:30px;
+			left:110px;
+		}
+	}
+	li:nth-child(4){
+		
+		div:first-child{
+			position:absolute;
+			left:180px;
+		}
+		div:last-child{
+			position:absolute;
+			top:30px;
+			left:160px;
+		}
+	}
+	
+}
+.kbintro_ul_horizontal_list3{
+	height:200px;
+	li{
+	
+		height:140px;
+		div{
+			div{
+				margin-left:50px;
+				height:140px;
+			}
+			p{
+					font-size:20px;
+					color:@fontorange;
+			}
+		}
+	}
+	
+}
+
 .content_head{
 	div{
 		display:inline;
@@ -366,6 +535,64 @@ footer{
 	.content_head_right{
 		margin-left:450px;
 		font-size:14px;
+	}
+}
+
+/* healthkonw */
+.maintable{
+	border:10px solid #ffffff;
+	tr{
+		height:150px;
+		border:10px solid #ffffff;
+		background:@bgcolor;
+		td{
+			img{
+				margin-left:10px;
+				height:85px;
+				width:125px;
+			}
+			div{
+				p:nth-child(1){
+					font-size:20px;
+				}
+				p:nth-child(2){
+					font-size:14px;
+				}
+				p:nth-child(3){
+					font-size:14px;
+					color:#8c8c8c;
+				}
+			}
+		}
+	}
+}
+
+.pageindex{
+	padding:30px;
+	.active{
+		background:@maincolor;
+	}
+	
+}	
+
+.maincontent{
+	background:@contentbgcolor;
+}
+
+.maincontent-title{
+	font-size:30px;
+	color:@maincolor;
+}
+
+/* 专家咨询界面 */
+.ea_content_title{
+	background:@contentbgcolor;
+	span:first-child{
+		background:@maincolor;
+		margin-left:10px;
+	}
+	span:last-child{
+		margin-left:400px;
 	}
 }
 
