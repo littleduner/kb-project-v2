@@ -1,0 +1,158 @@
+﻿/* 专家咨询界面 */
+.ea_maincontent{
+	background:@contentbgcolor;
+}
+.ea_maintable{
+	.tableimage{
+		img{
+			width:80px;
+			border:5px solid @bgcolor;
+			margin-left:10px;
+		}
+	}
+	tr{
+		background:@listselected;
+		border:5px solid @contentbgcolor;
+		
+	}
+	
+}
+.ea_content_title{
+	background:@contentbgcolor;
+	span:first-child{
+		color:@maincolor;
+		margin-left:10px;
+	}
+	span:last-child{
+		margin-left:700px;
+		font-size:14px;
+	}
+}
+.ea_title_zhuanjiajiedu{
+	height:50px;
+	background:@listselected;
+	div{
+		height:40px;
+	}
+}
+.ea_title_zhuanjiajiedu~li{
+	table{
+		width:100%;
+		background:@contentbgcolor;
+	}
+}
+
+.ea_title_zhuanjiajiedu_td{
+	div{
+		ul{
+			
+			margin-left:-50px;
+			li{
+				display:inline-block;
+				width:120px;
+				height:30px;
+				div,div.active,div:hover{
+					padding-top:5px;
+					height:30px;
+					background:@listselected;
+					width:120px;
+					border-radius:10px;
+					
+				}
+				div.active,div:hover{
+					color:@maincolor;
+				}
+				div:before{
+						content:"";
+						background:url("../images/zhuanjiazixun/findgray.jpg");
+						background-repeat:no-repeat;
+						width:17px;
+						height:17px;
+						float:left;
+						margin-left:10px;
+				}
+				div.active:before,div:hover:before{
+						content:"";
+						background:url("../images/zhuanjiazixun/findgreen.jpg");
+						background-repeat:no-repeat;
+						width:17px;
+						height:17px;
+						float:left;
+						margin-left:10px;
+				}
+				
+			}
+			
+		}
+		a{
+			color:@fontorange;
+		}
+	}
+	div:nth-child(2){
+		font-size:12px;
+	}
+}
+.ea_content_rigth2{
+	
+	.ul_title{
+		height:50px;
+		background:@listselected;
+		position:relative;
+		div:first-child{
+			position:absolute;
+			left:20px;
+			top:5px;
+			height:30px;
+			width:55%;
+			background:url("../images/zhuanjiazixun/zhuanjiatuijian.jpg");
+			background-repeat:no-repeat;
+		}
+		
+		div:last-child{
+			position:absolute;
+			left:75%;
+			top:50%;
+			height:30px;
+			width:30%;
+			background:url("../images/index/more.jpg");
+			background-repeat:no-repeat;
+		}
+	}
+	.ul_title div{
+		display:inline-block;
+	}
+	.ul_title2{
+		height:50px;
+		background:@listselected;
+		position:relative;
+		div:first-child{
+			position:absolute;
+			left:20px;
+			top:5px;
+			height:30px;
+			width:55%;
+			background:url("../images/zhuanjiazixun/jiuyizhinan.jpg");
+			background-repeat:no-repeat;
+		}
+		
+		
+	}
+	.ul_title2 div{
+		display:inline-block;
+	}
+	
+	.ea_right_maintable{
+		width:100%;
+		.ea_right_tableimage{
+			img{
+				width:67px;
+				height:81px;
+			}
+		}
+		tr{
+			background:@contentbgcolor;
+		}
+	}
+	
+}
+/* v2 lvcheng */

@@ -1,0 +1,49 @@
+﻿/*居中*/
+.getCenter (@x, @y) {left:50%; right:50%; top:50%; bottom:50%; margin-left:- @x/2; margin-top: - @y/2;}
+/*圆角*/
+.getBorderRadius (@m) {
+	border-radius:@m;
+	-webkit-border-radius:@m;
+	-moz-border-radius:@m;
+	-ms-border-radius:@m;
+}
+/*过渡*/
+.getTransition  (@transition) {
+	-webkit-transition:@transition; 
+	-moz-transition:@transition; 
+	-o-transition:@transition; 
+	-ms-transition:@transition; 
+	transition:@transition; 
+}
+/*形变*/
+.getTransform (@transform) {
+	-webkit-transform:@transform; 
+	-moz-transform:@transform; 
+	-o-transform:@transform; 
+	-ms-transform:@transform; 
+	transform:@transform; 
+}
+/* 梯度渐变 */
+.getGradient(@type, @color1, @color2) {
+	background:-moz-linear-gradient(@type, @color1, @color2);/*Mozilla*/
+	background:-webkit-linear-gradient(@type, @color1, @color2);/*new gradient for Webkit*/
+	background:-o-linear-gradient(@type, @color1, @color2); /*Opera11*/
+	background:-ms-linear-gradient(@type, @color1, @color2); /*Ie 11+*/
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr= @color1,endcolorstr= @color2,gradientType=0); /*Ie 10-*/
+}
+/* 阴影 */
+.getBoxShdow (@boxshdow){  
+	-webkit-box-shadow:@boxshdow;
+	-moz-box-shadow:@boxshdow;
+	-o-box-shadow:@boxshdow;
+	-ms-box-shadow:@boxshdow;
+	box-shadow:@boxshdow;
+}
+/* 阴影 */
+.getTextShdow (@testshdow){  	
+	-webkit-text-shadow:@testshdow;
+	-moz-text-shadow:@testshdow;
+	-o-text-shadow:@testshdow;
+	-ms-text-shadow:@testshdow;
+	text-shadow:@testshdow;
+}

@@ -1,0 +1,35 @@
+﻿/* 公共类 */
+.wp{width:980px;margin:0 auto;}
+.ml15{margin-left:15px;}
+.bgw{background:#fff;}
+.p15{padding:15px;}
+.p10{padding:10px;}
+.p8{padding:8px;}
+/* 绿色按钮 */
+.btn-success{background:@color1;color:#fff;border:0;.getTextShdow(0 0 0 #fff);}
+
+body{font-family:"微软雅黑";font-size:12px;background:#EFEFEF;}
+h2,.btn{font-family:"微软雅黑"}
+/* header  */
+header{
+	padding:10px 0;background:#fff;
+	h2{font-size:2em;line-height:50px;height:50px;padding-left:54px;background:url(../images/logo.jpg) no-repeat left center;}
+	.input-append{margin-top:13px;}
+	.form-search .input-append .search-query,.form-search .input-append .btn{height:26px;.getBorderRadius(0);}
+}
+.main_menu{
+	background:@color1;padding:0;
+	.getBoxShdow(1px 0px 5px #999);
+	ul{
+		li{
+			float:left;width:14.28%;text-align:center;font-size:14px;line-height:3em;height:3em;color:#fff;background:@color1;
+			border-left:1px solid #7AD2AC;border-right:1px solid #08905A;cursor:pointer;
+			.getTransition(@animateTIme);
+			&:hover,{
+				background:#FFC925;
+			}
+		}
+		.active{background:#FFC925;}
+	}
+}
+footer{width:100%;height:100px;padding-top:37px;text-align:center;color:#fff;background:@color1;margin-top:15px;}
