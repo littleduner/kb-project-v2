@@ -215,3 +215,5 @@ pip-log.txt
 .mr.developer.cfg
 
 /node_modules
+/stylesheets/myStyle.css
+/lib/myJquery.min.js

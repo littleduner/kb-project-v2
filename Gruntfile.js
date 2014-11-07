@@ -32,7 +32,7 @@ module.exports = function (grunt) {
 			},
 		},
 		watch: {
-			files: ['<%= uglify.build.src %>', '<%= less.portal.src %>'],
+			files: ['<%= uglify.build.src %>', './styleSheets/*.less'],
 			tasks: ['concat','uglify', 'less']
 		}
 	});
