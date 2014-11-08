@@ -40,33 +40,78 @@ header{
 		.active{background:#FFC925;}
 	}
 }
+
 section.kb_section{
 	 margin-top:15px;
 	 font-size:14px;
 	 .leftarea{
+		height:450px;
 		width:20%;
 		background:@contentbgcolor;
+		.my_info{
+			height:130px;
+			table{
+				
+				margin-top:20px;
+				width:100%;
+				tr{
+					width:100%
+				}
+				td{
+					width:50%;
+					height:40px;
+				}
+			}
+			ul{
+				width:100%;
+				
+				li{
+					border:1px solid #ccc;
+					height:50px;
+					width:50%;
+				}
+			}
+		}
 		.left_nav{
 			.accordion{
+				padding-top:30px;
 				.accordion-heading{
-					background:@contentbgcolor;
+					overflow:hidden;
+					height:30px;
 					
-					padding:10px;
 					a{
+						background:@maincolor;
+						display:block;
+						width:200px;
+						height:100%;
+						padding-top:5px;
 						text-decoration:none;
 						cursor:default;
-						color:#000;
+						color:#ffffff;
 					}
+				}
+				.accordion-group{
+					margin-bottom:0;
+					border:0 solid #000;
 				}
 				.accordion-body{
 					ul{
 							li{
-								padding:5px;
-								background:@maincolor;
-								border-bottom:3px solid #ccc;
+								background:@contentbgcolor;
+								overflow:hidden;
+								height:30px;
 								a{
+									display:block;
+									width:200px;
+									height:100%;
+									padding-top:5px;
 									cursor:pointer;
-									color:@contentbgcolor;
+									color:#000;
+									background:@contentbgcolor;
+									text-decoration:none;
+									&:hover{
+										background:lighten(@activeorange,20%);
+									}
 								}
 							}
 					}
@@ -78,7 +123,20 @@ section.kb_section{
 		margin-left:1%;
 		background:@contentbgcolor;
 		width:79%;
+		
+		.title{
+			height:50px;
+			padding:10px;
+			
+			border-bottom:10px solid @bgcolor;
+		}
+			.maincontent{
+			padding-top:30px;
+			width:100%;
+			height:500px;
+		 }
 	 }
+	
 	 
 }
 
